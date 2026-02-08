@@ -1,5 +1,6 @@
  /* container */
 .navbar {
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -7,7 +8,7 @@
   align-items: center;
   padding: 1rem 2rem;
   color: var(--color-white);
-  background-color: var(--color-dark-blue);
+  background: linear-gradient(to bottom, var(--color-blue), var(--color-dark-blue));
 }
 
 /* left column: logo stacked above address */
@@ -22,7 +23,7 @@
 /* white pill around just the logo */
 .logo-link {
   padding: 0;
-  margin-top: -10px;
+  margin-top: -0.7rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +33,7 @@
 /* logo size */
 img.logo {
   display: block;
-  width: 40%;
+  width: 30%;
   height: auto;
 }
 
@@ -58,6 +59,7 @@ img.logo {
   font-weight: 500;
   font-size: 1.25rem;
   color: var(--color-white);
+  font-weight: 600;
 }
 
 .nav-link:hover {
@@ -87,7 +89,7 @@ p.address-text {
   margin: 0;
   padding: 0;
   color: var(--color-grey);
-  opacity: 80%;
+  opacity: 90%;
   text-align: center;
   font-size: 0.7rem;
   height: 20%;
