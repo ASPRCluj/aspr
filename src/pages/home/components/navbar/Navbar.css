@@ -1,0 +1,94 @@
+ /* container */
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: var(--color-white);
+  background-color: var(--color-dark-blue);
+}
+
+/* left column: logo stacked above address */
+.navbar-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+
+/* white pill around just the logo */
+.logo-link {
+  padding: 0;
+  margin-top: -10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+/* logo size */
+img.logo {
+  display: block;
+  width: 40%;
+  height: auto;
+}
+
+/* address line under logo */
+.site-address {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* right side nav links (horizontal) */
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0 4rem 0 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--color-white);
+}
+
+.nav-link:hover {
+  color: var(--color-yellow);
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 720px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .navbar-right {
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+p.address-text {
+  margin: 0;
+  padding: 0;
+  color: var(--color-grey);
+  opacity: 80%;
+  text-align: center;
+  font-size: 0.7rem;
+  height: 20%;
+}
