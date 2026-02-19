@@ -1,17 +1,22 @@
+/* Homepage */
 .homepage {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Montserrat';
 }
 
 .homepage .header {
-    height: 15%;
+    height: 15vh;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .homepage .body {
-    height: 85%;
     width: 100%;
     background-color: var(--color-dark-blue);
     display: flex;
@@ -19,14 +24,16 @@
     align-items: center;
 }
 
+/* First section */
 .first-section {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    color: var(--color-white);
+    scroll-snap-align: start;
+    color: var(--color-white);  
 }
 
 .motto-text {
@@ -36,13 +43,12 @@
     justify-content: center;
     align-items: center;
     padding-left: 5rem;
-    animation: fadeInLeft 0.8s ease-out 0.4s both;
+    animation: fadeInLeft 0.4s ease-out 0.4s both;
 }
 
 .motto-text > p {
-    margin-top: -2rem;
     text-align: start;
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .logo-pic {
@@ -52,11 +58,10 @@
     justify-content: center;
     align-items: center;
     padding-right: 3rem;
-    animation: fadeInRight 0.8s ease-out 0.4s both;
+    animation: fadeInRight 0.4s ease-out 0.4s both;
 }
 
 .logo-pic > img {
-    margin-top: -6rem;
     margin-left: 2rem;
     height: 40rem;
     width: 40rem;
@@ -67,6 +72,7 @@
     font-weight: bold;
 }
 
+/* First section: animations */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -87,4 +93,180 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Second section */
+.second-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: var(--color-white);
+    background-color: var(--color-dark-blue);
+    scroll-snap-align: start;
+    padding-top: 15vh;
+}
+
+.second-section > .line-divider {
+  content: "";
+  width: 60vw;
+  max-width: 60%;
+  height: 2px;
+  background: var(--color-white);
+  opacity: 0.95;
+  border-radius: 1px;
+}
+
+.second-section h1 {
+    color: var(--color-yellow);
+    margin-top: 2rem;
+    text-align: center;
+    font-size: clamp(3vmin, 2rem, 4vmin);
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+.second-section svg {
+    width: 50vmax;
+    height: auto;
+}
+
+.description {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 1.5rem;
+    width: 40%;
+    height: 20%;
+}
+
+.description p {
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+/* .description .ceva {
+    content: '';
+    height: 500px;
+    width: 500px;
+    float: right;
+    shape-outside: polygon(48% 66%, 60% 39%, 64% 0, 75% 100%, 0 100%, 24% 85%);
+} */
+
+/* Second section: animations */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translate(0%, 0%)
+  }
+  to {
+    transform: translate(-20vw, 0%)
+  }
+}
+
+.animate-trans-left {
+    animation: moveLeft 0.6s ease-out 0.3s both;
+}
+
+.animate-fade-out {
+   animation: fadeOut 0.4s ease-out 0.4s both;
+}
+
+.animate-fade-in {
+   animation: fadeIn 0.4s ease-out 0.4s both;
+}
+
+.component1 {
+    fill: var(--color-yellow);
+}
+
+.component2 {
+    fill: var(--color-blue);
+}
+
+.second-section svg path:hover {
+    fill: black;
+}
+
+@media (max-width: 1550px), (max-height: 930px) {
+    .motto-text > p {
+        font-size: 4rem;
+    }
+
+    .logo-pic > img{
+        height: 25rem;
+        width: 25rem;
+    }
+}
+@media (max-width: 1250px), (max-height: 700px) {
+    .motto-text > p {
+        font-size: 3.5rem;
+    }
+
+    .logo-pic > img{
+        height: 325px;
+        width: 325px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .first-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .motto-text {
+        width: 80%;
+        padding-left: 0;
+    }
+
+    .motto-text > p {
+        font-size: 4rem;
+    }
+
+    /* .second-section h1 {
+        font-size: 1.75rem;
+    } */
+}
+
+/* @media (max-width: 900px) {
+    .second-section h1 {
+        font-size: 1.5rem;
+    }
+} */
+
+@media (max-width: 700px) {
+    .motto-text > p {
+        font-size: 2.75rem;
+    }
+
+    .logo-pic > img{
+        height: 275px;
+        width: 275px;
+    }
+
+    /* .second-section h1 {
+        font-size: 1.25rem;
+    } */
 }

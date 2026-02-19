@@ -1,0 +1,85 @@
+.container {
+  position: relative;
+  top: 4rem;
+  width: min(900px, 90vw);
+  height: min(450px, 70vw);
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  /* left: 50%; */
+  transform: translate(0%, -50%);
+  margin: 0 10rem;
+  background: transparent;
+  padding: 25px 35px;
+  border-radius: 12px;
+  border: 2px solid var(--color-yellow);
+  text-align: center;
+  /* z-index: 2; */
+  box-shadow: 0 0 20px rgba(241, 129, 68, 0.3);
+}
+
+.hotspot {
+  position: absolute;
+  width: 100px;
+  height: 100px;    
+  background: #38bdf8;
+  border-radius: 50%;
+  cursor: pointer;
+  /* z-index: 3; */
+
+  transition: transform 0.3s;
+}
+
+.hotspot:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(56,189,248,0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(56,189,248,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(56,189,248,0);
+  }
+}
+
+/* Tooltip */
+/* .tooltip {
+  position: absolute;
+  background: #334155;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, -150%);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.hotspot.active .tooltip {
+  opacity: 1;
+  transform: translate(-50%, -180%);
+} */
+
+.h1 { 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+.h2 { 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%);
+}
+
+.h3 { 
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
