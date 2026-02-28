@@ -28,13 +28,9 @@
 
 img.logo {
   display: block;
-  width: 30%;
+  /* width: 30%; */
+  width: clamp(60px, 30%, 30%);
   height: auto;
-}
-
-.site-address {
-  margin: 0;
-  font-size: 0.9rem;
 }
 
 .nav-links {
@@ -59,13 +55,14 @@ img.logo {
   color: var(--color-yellow);
 }
 
-p.address-text {
+.address-text {
   margin: 0;
   padding: 0;
   color: var(--color-grey);
   opacity: 90%;
   text-align: center;
-  font-size: 0.7rem;
+  /* font-size: 0.7rem; */
+  font-size: clamp(8px, 0.7rem, 2.25vmin);
   height: 20%;
 }
 
@@ -176,7 +173,7 @@ p.address-text {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1020px) {
   .nav-links { display: none; }
 
   .menu-button { 
@@ -189,5 +186,11 @@ p.address-text {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .address-text {
+    font-size: clamp(8px, 0.6rem, 0.6rem);
   }
 }
