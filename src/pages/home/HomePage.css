@@ -122,6 +122,7 @@
 .second-section h1 {
     color: var(--color-yellow);
     margin-top: 2rem;
+    margin-bottom: 6vh;
     text-align: center;
     font-size: clamp(3vmin, 2rem, 4vmin);
     padding: 0rem 2rem 0rem 2rem;
@@ -139,17 +140,19 @@
 
 .second-section svg {
     /* width: 50vmax; */
-    width: clamp(50vmax, 50vmax, 40%);
+    /* width: clamp(50vmax, 50vmax, 40%); */
+    width: 60vh;
     height: auto;
     max-height: 60vh;
 }
 
 .description {
-    font-size: 100%;
-    width: 35%;
+    font-size: 1.3vw;
+    width: 40vw;
     height: auto;
     max-height: 25%;
-    /* margin-left: -25vw; */
+    margin-left: -30vh;
+    margin-top: -5%;
     visibility: hidden;
     /* overflow: hidden; */
 }
@@ -157,6 +160,7 @@
 .description p {
     text-align: center;
     line-height: 2rem;
+    text-align: left;
 }
 
 .button-section {
@@ -164,8 +168,9 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    gap: 3vw;
-    margin: 5vh 0 10vh 0;
+    gap: 2vw;
+    z-index: 0;
+    /* margin: 5vh 0 10vh 0; */
 }
 
 .button-line {
@@ -179,9 +184,9 @@
 .yellow-button {
  display: inline-block;
  padding: 0.9rem 1.8rem;
- width: clamp(100px, 20vw, 20vw);
- height: 2vh;
- line-height: 2vh;
+ width: 20vw;
+ height: 1vw;
+ line-height: 1vw;
  /* height: clamp(20px, 5vh, 40px);
  line-height: clamp(35px, 5vh, 40px); */
  font-size: clamp(10px, 1.25rem, 2vw);
@@ -304,6 +309,16 @@
     .motto-text > p {
         font-size: 4rem;
     }
+
+    .second-section .main-components {
+        justify-content: start;
+    }
+
+    .main-components .description {
+        width: 50vw;
+        font-size: 1.5vw;
+    }
+
 }
 
 @media (max-width: 720px) {
@@ -314,5 +329,13 @@
     .logo-pic > img {
         width: clamp(18rem, 60vw, 100vw);
         height: auto;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .yellow-button {
+        width: 25vw;
+        font-size: 3vw;
     }
 }
