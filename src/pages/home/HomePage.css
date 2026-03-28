@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0 2rem 5rem;
+    padding: 2rem 0 2rem 7rem; /*5rem*/
     animation: fadeInLeft 0.4s ease-out 0.4s both;
 }
 
@@ -147,8 +147,10 @@
 }
 
 .description {
-    font-size: 1.3vw;
-    width: 40vw;
+    /* font-size: 1.3vw; */
+    font-size: 1.5rem;
+    /* width: 40vw; */
+    width: clamp(725px, 40vw, 40vw);
     height: auto;
     max-height: 25%;
     margin-left: -30vh;
@@ -175,7 +177,7 @@
 
 .button-line {
     content: "";
-    width: 30vw;
+    width: 25vw;
     height: 2px;
     background: var(--color-white);
     opacity: 0.95;
@@ -310,13 +312,18 @@
         font-size: 4rem;
     }
 
-    .second-section .main-components {
+    /* .second-section .main-components {
         justify-content: start;
+    } */
+
+    .second-section svg {
+        width: 50vw;
+        height: auto;
     }
 
     .main-components .description {
-        width: 50vw;
-        font-size: 1.5vw;
+        width: 625px;
+        font-size: 1.3rem;
     }
 
 }
